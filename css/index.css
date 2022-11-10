@@ -1,0 +1,287 @@
+@font-face {
+    font-family: KaushanScript-Regular;
+    src: url(../assets/fonts/KaushanScript-Regular.ttf);
+}
+
+@font-face {
+    font-family: Nunito-Regular;
+    src: url(../assets/fonts/nunito/Nunito-Regular.ttf);
+}
+
+@font-face {
+    font-family: Nunito-Bold;
+    src: url(../assets/fonts/nunito/Nunito-Bold.ttf);
+}
+
+@font-face {
+    font-family: Nunito-Black;
+    src: url(../assets/fonts/nunito/Nunito-Black.ttf);
+}
+
+.ksh {
+    font-family: 'KaushanScript-Regular';
+}
+
+.nb {
+    font-family: 'Nunito-Black';
+}
+
+.nr {
+    font-family: 'Nunito-Regular';
+}
+
+.nbld {
+    font-family: 'Nunito-Bold';
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+*::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+*::-webkit-scrollbar {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    transition: all .15s ease-out;
+    background-color: #4484c48a;
+    border-radius: 2px;
+    border: transparent;
+    margin: 1px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    transition: all .15s ease-out;
+    background-color: #4483C4;
+}
+
+html,
+body {
+    width: 100vw;
+    min-width: 100vw;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/****styles for header ****/
+header {
+    width: 100vw;
+    display: flex;
+    background-color: #4483C4;
+    height: 45px;
+    justify-content: space-between;
+    padding-inline: 4px;
+    align-items: center;
+}
+
+header > .home-link {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+header > .home-link:hover {
+    color: indigo;
+}
+
+header > button.menu-btn:hover, header > button.menu-btn:hover > svg {
+    color: rgb(61, 61, 61);
+}
+
+/****styles for main ****/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background-color: lim;
+    padding-top: 5%;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+section.form-section {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+}
+
+form.task-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 80vw;
+    border: 1px solid #ddd;
+    gap: 15px;
+    padding: 2%;
+    max-width: 90vw;
+}
+
+div.input-wrapper, ul li.item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border: 1px solid #ddd;
+    height: 32px;
+    align-items: center;
+    padding-inline-start: 5px;
+    overflow: hidden;
+}
+
+div.input-wrapper label {
+    display: block;
+    position: relative;
+}
+
+div.input-wrapper input:not(browser-default) {
+    transition: all .12s ease-in;
+    width: -webkit-fill-available;
+    max-width: -webkit-fill-avalable;
+    height: 100%;
+    padding-inline-start: 5px;
+    margin-inline-start: 5px;
+}
+
+div.input-wrapper input[type="date"]:not(browser-default) {
+    margin-inline-start: auto;
+    width: 40%;
+}
+
+div.input-wrapper input[type="time"]:not(browser-default) {
+    width: 29%;
+    margin-inline-end: 0px;
+}
+
+div.input-wrapper input:focus-visible{
+    outline-width: 0px;
+    transition: all .12s ease-in;
+    border: 1px solid #ddd;
+    border-top: 0px solid #ddd;
+    border-bottom: 0px solid #ddd;
+    border-radius: inherit;
+}
+
+div.button-wrapper {
+    margin-inline-start: auto;
+    margin-inline-end: 0%;
+}
+
+div.button-wrapper button.add-task {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80px;
+    margin: auto;
+    margin-inline-end: 0%;
+    padding-block: 4px;
+}
+
+section.list-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 90vw;
+    border: 1px solid #ddd;
+    padding-inline: 8px;
+    padding-block: 12px;
+    max-width: 90vw;
+    gap: 8px;
+    cursor: default;
+}
+
+section.list-view .h-text {
+    font-weight: bold;
+}
+
+ul.task-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    max-width: 100%;
+    gap: 5px;
+    max-width: -webkit-fill-availabe;
+}
+
+ul li.item {
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 500;
+    padding-inline-end: 1px;
+}
+
+ul li.item span.task-name {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+ul li.item button.delete {
+    transition: all .12s ease-in;
+    display: none;
+}
+
+ul li.item:hover > button.delete {
+    transition: all .12s ease-in;
+    display: block;
+}
+
+button.delete:hover {
+    transition: all .12s ease-in;
+    background-color: red;
+    color: white;
+}
+
+/**Task Detail**/
+div.view {
+    
+}
+
+div.view div.task-detail-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 90vw;
+    border: 1px solid #ddd;
+    padding-block-end: 12px;
+    max-width: 90vw;
+    cursor: default;
+}
+
+div.view div.task-detail-wrapper div.detail-header {
+    min-width: 100%;
+    color: #4483C4;
+    display: flex;
+    justify-content: space-between;
+    padding-inline-start: 6px;
+}
+
+table.d-table, div.task-detail {
+    width: 100%;
+}
+
+table.d-table tbody tr {
+    min-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+div.view div.task-detail-wrapper div.task-detail {
+    padding-inline: 8px;
+}
